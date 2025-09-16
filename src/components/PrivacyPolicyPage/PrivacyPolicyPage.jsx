@@ -1,20 +1,17 @@
-import { Helmet } from "react-helmet-async";
-
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <Helmet>
-        <title>Política de Privacidade - Metrópole Serviços</title>
-        <meta
-          name="description"
-          content="Consulte a política de privacidade da Metrópole Serviços para entender como suas informações são tratadas ao visitar nosso site."
-        />
-        <meta name="robots" content="noindex, follow" />
-        <link
-          rel="canonical"
-          href="https://www.metropoleserv.com.br/politica-de-privacidade"
-        />
-      </Helmet>
+      <title>Política de Privacidade - Metrópole Serviços</title>
+      <meta
+        name="description"
+        content="Consulte a política de privacidade da Metrópole Serviços para entender como suas informações são tratadas ao visitar nosso site."
+      />
+      <meta name="robots" content="noindex, follow" />
+      <link
+        rel="canonical"
+        href="https://www.metropoleserv.com.br/politica-de-privacidade"
+      />
+
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-blue-950 mb-6">
           Política de Privacidade da Metrópole Serviços

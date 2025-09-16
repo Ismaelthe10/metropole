@@ -4,34 +4,27 @@ import aboutImg from "../../assets/about.webp";
 export default function About() {
   return (
     <>
-      <Helmet>
-        <title>
-          Sobre a Metrópole Serviços - Nossa História e Valores | Curitiba
-        </title>
-        <meta
-          name="description"
-          content="Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência."
-        />
-        <link rel="canonical" href="https://www.metropoleserv.com.br/sobre" />
-        {/* Open Graph Tags para a página Sobre */}
-        <meta
-          property="og:title"
-          content="Conheça a Metrópole Serviços - História e Missão"
-        />
-        <meta
-          property="og:description"
-          content="Saiba mais sobre a Metrópole Serviços, nossa jornada e compromisso com a excelência em terceirização."
-        />
-        <meta
-          property="og:url"
-          content="https://www.metropoleserv.com.br/sobre"
-        />
-        <meta
-          property="og:image"
-          content="https://www.metropoleserv.com.br/assets/og-image-about.jpg"
-        />{" "}
-        {/* Imagem específica para a página Sobre */}
-      </Helmet>
+      <title>
+        Sobre a Metrópole Serviços - Nossa História e Valores | Curitiba
+      </title>
+      <meta
+        name="description"
+        content="Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência."
+      />
+      <link rel="canonical" href="https://www.metropoleserv.com.br/sobre" />
+      {/* Open Graph Tags para a página Sobre */}
+      <meta
+        property="og:title"
+        content="Conheça a Metrópole Serviços - História e Missão"
+      />
+      <meta
+        property="og:description"
+        content="Saiba mais sobre a Metrópole Serviços, nossa jornada e compromisso com a excelência em terceirização."
+      />
+      <meta
+        property="og:url"
+        content="https://www.metropoleserv.com.br/sobre"
+      />
 
       <main className="bg-white">
         {/* ===== SEÇÃO 1: TÍTULO E INTRODUÇÃO ===== */}

@@ -1,45 +1,40 @@
-import { Helmet } from "react-helmet-async";
 import { FaShieldAlt, FaBroom, FaTools } from "react-icons/fa";
 import Card from "../../components/Card/Card.jsx";
 
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title>
-          Metrópole Serviços - Terceirização em Curitiba | Segurança, Limpeza e
-          Facilities
-        </title>
-        <meta
-          name="description"
-          content="Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios."
-        />
-        <meta
-          name="keywords"
-          content="terceirização serviços Curitiba, segurança patrimonial, limpeza predial, portaria 24h, facilities, manutenção predial, Curitiba, Paraná"
-        />
-        <link rel="canonical" href="https://www.metropoleserv.com.br/" />
-        {/* Open Graph Tags */}
-        <meta
-          property="og:title"
-          content="Metrópole Serviços - Terceirização de Serviços em Curitiba"
-        />
-        <meta
-          property="og:description"
-          content="Soluções completas em segurança, limpeza e manutenção para empresas e condomínios em Curitiba e região."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.metropoleserv.com.br/" />
-        <meta
-          property="og:image"
-          content="https://www.metropoleserv.com.br/assets/og-image-home.jpg"
-        />{" "}
-        {/* Imagem específica para a Home */}
-        <meta property="og:site_name" content="Metrópole Serviços" />
-        <meta property="og:locale" content="pt_BR" />
-        {/* Exemplo de Schema Markup (JSON-LD ) para LocalBusiness */}
-        <script type="application/ld+json">
-          {`
+      <title>
+        Metrópole Serviços - Terceirização em Curitiba | Segurança, Limpeza e
+        Facilities
+      </title>
+      <meta
+        name="description"
+        content="Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios."
+      />
+      <meta
+        name="keywords"
+        content="terceirização serviços Curitiba, segurança patrimonial, limpeza predial, portaria 24h, facilities, manutenção predial, Curitiba, Paraná"
+      />
+      <link rel="canonical" href="https://www.metropoleserv.com.br/" />
+      {/* Open Graph Tags */}
+      <meta
+        property="og:title"
+        content="Metrópole Serviços - Terceirização de Serviços em Curitiba"
+      />
+      <meta
+        property="og:description"
+        content="Soluções completas em segurança, limpeza e manutenção para empresas e condomínios em Curitiba e região."
+      />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.metropoleserv.com.br/" />
+
+      {/* Imagem específica para a Home */}
+      <meta property="og:site_name" content="Metrópole Serviços" />
+      <meta property="og:locale" content="pt_BR" />
+      {/* Exemplo de Schema Markup (JSON-LD ) para LocalBusiness */}
+      <script type="application/ld+json">
+        {`
             {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
@@ -65,8 +60,7 @@ export default function Home() {
               ]
             }
           `}
-        </script>
-      </Helmet>
+      </script>
 
       <main>
         {/* ===== SEÇÃO 1: HERO (APRESENTAÇÃO PRINCIPAL ) ===== */}

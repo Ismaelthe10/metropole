@@ -1,20 +1,17 @@
-import { Helmet } from "react-helmet-async";
-
 export default function TermsOfUsePage() {
   return (
     <>
-      <Helmet>
-        <title>Termos de Uso - Metrópole Serviços</title>
-        <meta
-          name="description"
-          content="Consulte os termos de uso do site da Metrópole Serviços. Ao acessar e utilizar este site, você concorda com nossas condições."
-        />
-        <meta name="robots" content="noindex, follow" />
-        <link
-          rel="canonical"
-          href="https://www.metropoleserv.com.br/termos-de-uso"
-        />
-      </Helmet>
+      <title>Termos de Uso - Metrópole Serviços</title>
+      <meta
+        name="description"
+        content="Consulte os termos de uso do site da Metrópole Serviços. Ao acessar e utilizar este site, você concorda com nossas condições."
+      />
+      <meta name="robots" content="noindex, follow" />
+      <link
+        rel="canonical"
+        href="https://www.metropoleserv.com.br/termos-de-uso"
+      />
+
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-blue-950 mb-6">
           Termos de Uso do Site da Metrópole Serviços
