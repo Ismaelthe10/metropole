@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { FaRegBuilding, FaRegEye, FaRegHeart } from "react-icons/fa";
 import aboutImg from "../../assets/about.webp";
 export default function About() {
