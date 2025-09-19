@@ -17,7 +17,7 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow-md bg-blue-950 text-white h-32 relative">
+    <header className="shadow-md bg-blue-950 text-white h-32 relative flex items-center">
       {" "}
       <div className="base-container flex items-center justify-between p-2">
         <div className="flex-shrink-0 hover:scale-105 transition-transform duration-300">
