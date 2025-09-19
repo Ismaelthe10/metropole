@@ -17,12 +17,17 @@ export default function Header() {
   };
 
   return (
-    <header className="shadow-md bg-blue-950 text-white relative ">
+    <header className="shadow-md bg-blue-950 text-white h-32 relative">
       {" "}
       <div className="base-container flex items-center justify-between p-2">
         <div className="flex-shrink-0 hover:scale-105 transition-transform duration-300">
           <a href="/" aria-label="Voltar para a página inicial">
-            <img src={logo} className="w-28" alt="Logo da Metrópole Serviços" />
+            <img
+              src={logo}
+              width="120"
+              height="48"
+              alt="Logo da Metrópole Serviços"
+            />
           </a>
         </div>
 

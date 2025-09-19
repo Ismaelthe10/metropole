@@ -48,7 +48,7 @@ export default function About() {
                 className="rounded-lg shadow-xl w-full h-auto flex-shrink-0 hover:scale-105 transition-transform duration-1000"
               />
             </div>
-            <div className="text-gray-700">
+            <div className="text-gray-700 text-center">
               <h2 className="text-3xl font-bold text-blue-950 mb-6">
                 Nossa Jornada
               </h2>
