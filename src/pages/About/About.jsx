@@ -1,5 +1,7 @@
 import { FaRegBuilding, FaRegEye, FaRegHeart } from "react-icons/fa";
 import aboutImg from "../../assets/about.webp";
+import Seo from "../../components/Seo/Seo.jsx";
+
 export default function About() {
   const aboutStructuredData = [
     {
@@ -63,7 +65,7 @@ export default function About() {
   ];
   return (
     <>
-      <SEO
+      <Seo
         keywords="sobre metrópole serviços, história empresa, missão visão valores, terceirização Curitiba"
         title="Sobre a Metrópole Serviços - Nossa História e Valores | Curitiba"
         description="Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência."

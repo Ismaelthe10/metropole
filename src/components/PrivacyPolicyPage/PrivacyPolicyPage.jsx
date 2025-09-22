@@ -1,7 +1,8 @@
+import Seo from "../../components/Seo/Seo.jsx";
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <SEO
+      <Seo
         title="Política de Privacidade - Metrópole Serviços"
         description="Consulte a política de privacidade da Metrópole Serviços para entender como suas informações são tratadas ao visitar nosso site."
         canonical="https://www.metropoleserv.com.br/politica-de-privacidade"

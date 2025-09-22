@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SEO = ({
+export default function SEO({
   title,
   description,
   keywords,
@@ -12,46 +12,41 @@ const SEO = ({
   ogImage,
   robots = "index, follow",
   structuredData,
-}) => {
+}) {
   useEffect(() => {
     // Título
     if (title) document.title = title;
 
     // Helper para meta tags
-    const updateMeta = (selector, attribute, value) => {
-      if (!value) return;
+    const updateMeta = (name, content, isProperty = false) => {
+      if (!content) return;
 
-      let element = document.querySelector(selector);
-      if (!element) {
-        element = document.createElement("meta");
-        const [attr, attrValue] = selector.match(/\[(.+?)="(.+?)"\]/) || [];
-        if (attr) {
-          const [attrName, attrVal] = attrValue.split("=");
-          element.setAttribute(
-            attrName.replace(/"/g, ""),
-            attrVal.replace(/"/g, "")
-          );
-        }
-        document.head.appendChild(element);
+      const selector = isProperty
+        ? `meta[property="${name}"]`
+        : `meta[name="${name}"]`;
+      let meta = document.querySelector(selector);
+
+      if (!meta) {
+        meta = document.createElement("meta");
+        meta.setAttribute(isProperty ? "property" : "name", name);
+        document.head.appendChild(meta);
       }
-      element.setAttribute(attribute, value);
+      meta.setAttribute("content", content);
     };
 
     // Meta tags
-    updateMeta('meta[name="description"]', "content", description);
-    updateMeta('meta[name="keywords"]', "content", keywords);
-    updateMeta('meta[name="robots"]', "content", robots);
+    updateMeta("description", description);
+    updateMeta("keywords", keywords);
+    updateMeta("robots", robots);
 
     // Open Graph
-    updateMeta('meta[property="og:title"]', "content", ogTitle || title);
-    updateMeta(
-      'meta[property="og:description"]',
-      "content",
-      ogDescription || description
-    );
-    updateMeta('meta[property="og:type"]', "content", ogType);
-    updateMeta('meta[property="og:url"]', "content", ogUrl);
-    updateMeta('meta[property="og:image"]', "content", ogImage);
+    updateMeta("og:title", ogTitle || title, true);
+    updateMeta("og:description", ogDescription || description, true);
+    updateMeta("og:type", ogType, true);
+    updateMeta("og:url", ogUrl, true);
+    updateMeta("og:image", ogImage, true);
+    updateMeta("og:site_name", "Metrópole Serviços", true); // Adicionado para consistência
+    updateMeta("og:locale", "pt_BR", true); // Adicionado para consistência
 
     // Canonical
     if (canonical) {
@@ -65,14 +60,25 @@ const SEO = ({
     }
 
     // Structured Data (JSON-LD)
+    // Remove scripts existentes de structured data
+    const existingScripts = document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    );
+    existingScripts.forEach((script) => script.remove());
+
     if (structuredData) {
-      let script = document.querySelector('script[type="application/ld+json"]');
-      if (!script) {
-        script = document.createElement("script");
+      // Se structuredData é um array, cria um script para cada item
+      const dataArray = Array.isArray(structuredData)
+        ? structuredData
+        : [structuredData];
+
+      dataArray.forEach((data, index) => {
+        const script = document.createElement("script");
         script.type = "application/ld+json";
+        script.id = `structured-data-${index}`;
+        script.textContent = JSON.stringify(data);
         document.head.appendChild(script);
-      }
-      script.textContent = JSON.stringify(structuredData);
+      });
     }
   }, [
     title,
@@ -89,6 +95,4 @@ const SEO = ({
   ]);
 
   return null; // Componente não renderiza nada
-};
-
-export default SEO;
+}

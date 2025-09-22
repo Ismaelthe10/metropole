@@ -1,5 +1,6 @@
 import { FaShieldAlt, FaBroom, FaTools } from "react-icons/fa";
 import Card from "../../components/Card/Card.jsx";
+import Seo from "../../components/Seo/Seo.jsx";
 
 export default function Home() {
   const homeStructuredData = {
@@ -129,7 +130,7 @@ export default function Home() {
   };
   return (
     <>
-      <SEO
+      <Seo
         title="Metrópole Serviços - Terceirização em Curitiba | Segurança, Limpeza e Facilities"
         description="Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios."
         keywords="terceirização serviços Curitiba, segurança patrimonial, limpeza predial, portaria 24h, facilities, manutenção predial, Curitiba, Paraná"

@@ -1,3 +1,5 @@
+import Seo from "../../components/Seo/Seo.jsx";
+
 export default function TermsOfUsePage() {
   const termsStructuredData = [
     {
@@ -59,7 +61,7 @@ export default function TermsOfUsePage() {
   ];
   return (
     <>
-      <SEO
+      <Seo
         title="Termos de Uso - Metrópole Serviços"
         description="Consulte os termos de uso do site da Metrópole Serviços. Ao acessar e utilizar este site, você concorda com nossas condições."
         canonical="https://www.metropoleserv.com.br/termos-de-uso"
