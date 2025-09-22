@@ -1,17 +1,71 @@
 export default function TermsOfUsePage() {
+  const termsStructuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Termos de Uso - Metrópole Serviços",
+      description:
+        "Consulte os termos de uso do site da Metrópole Serviços. Ao acessar e utilizar este site, você concorda com nossas condições.",
+      url: "https://www.metropoleserv.com.br/termos-de-uso",
+      datePublished: "2025-08-15",
+      dateModified: "2025-08-15",
+      inLanguage: "pt-BR",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Metrópole Serviços",
+        url: "https://www.metropoleserv.com.br",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Metrópole Serviços",
+        url: "https://www.metropoleserv.com.br",
+      },
+      mainEntity: {
+        "@type": "DigitalDocument",
+        "@id": "https://www.metropoleserv.com.br/termos-de-uso#terms",
+        name: "Termos de Uso do Site da Metrópole Serviços",
+        description:
+          "Documento legal que estabelece os termos e condições para uso do website da Metrópole Serviços",
+        dateCreated: "2025-08-15",
+        dateModified: "2025-08-15",
+        author: {
+          "@type": "Organization",
+          name: "Metrópole Serviços",
+        },
+        about: {
+          "@type": "Thing",
+          name: "Termos e Condições de Uso de Website",
+        },
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.metropoleserv.com.br/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Termos de Uso",
+          item: "https://www.metropoleserv.com.br/termos-de-uso",
+        },
+      ],
+    },
+  ];
   return (
     <>
-      <title>Termos de Uso - Metrópole Serviços</title>
-      <meta
-        name="description"
-        content="Consulte os termos de uso do site da Metrópole Serviços. Ao acessar e utilizar este site, você concorda com nossas condições."
+      <SEO
+        title="Termos de Uso - Metrópole Serviços"
+        description="Consulte os termos de uso do site da Metrópole Serviços. Ao acessar e utilizar este site, você concorda com nossas condições."
+        canonical="https://www.metropoleserv.com.br/termos-de-uso"
+        robots="noindex, follow"
+        structuredData={termsStructuredData}
       />
-      <meta name="robots" content="noindex, follow" />
-      <link
-        rel="canonical"
-        href="https://www.metropoleserv.com.br/termos-de-uso"
-      />
-
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-blue-950 mb-6">
           Termos de Uso do Site da Metrópole Serviços

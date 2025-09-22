@@ -1,28 +1,78 @@
 import { FaRegBuilding, FaRegEye, FaRegHeart } from "react-icons/fa";
 import aboutImg from "../../assets/about.webp";
 export default function About() {
+  const aboutStructuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "Sobre a Metrópole Serviços",
+      description:
+        "Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência.",
+      url: "https://www.metropoleserv.com.br/sobre",
+      mainEntity: {
+        "@type": "Organization",
+        name: "Metrópole Serviços",
+        description:
+          "Mais do que uma prestadora de serviços, somos seus parceiros em criar ambientes seguros, limpos e eficientes em Curitiba e Região.",
+        foundingDate: "2023",
+        founder: {
+          "@type": "Person",
+          name: "Fábio",
+        },
+        mission:
+          "Garantir a tranquilidade de nossos clientes através de serviços de segurança e facilities executados com máxima eficiência e profissionalismo.",
+        vision:
+          "Ser a empresa de terceirização de serviços mais confiável e recomendada de Curitiba, reconhecida pela nossa excelência e integridade.",
+        values:
+          "Compromisso, Qualidade, Transparência, Segurança e Respeito às Pessoas",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "R. Julio Luvisotto, 72 ",
+          addressLocality: "Campina Grande do Sul",
+          addressRegion: "PR",
+          postalCode: "83430-000",
+          addressCountry: "BR",
+        },
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+5541987937115",
+          email: "metropoleservicos.pr@gmail.com",
+          contactType: "customer service",
+        },
+        sameAs: ["https://www.instagram.com/metropoleserv"],
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.metropoleserv.com.br/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Sobre",
+          item: "https://www.metropoleserv.com.br/sobre",
+        },
+      ],
+    },
+  ];
   return (
     <>
-      <title>
-        Sobre a Metrópole Serviços - Nossa História e Valores | Curitiba
-      </title>
-      <meta
-        name="description"
-        content="Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência."
-      />
-      <link rel="canonical" href="https://www.metropoleserv.com.br/sobre" />
-      {/* Open Graph Tags para a página Sobre */}
-      <meta
-        property="og:title"
-        content="Conheça a Metrópole Serviços - História e Missão"
-      />
-      <meta
-        property="og:description"
-        content="Saiba mais sobre a Metrópole Serviços, nossa jornada e compromisso com a excelência em terceirização."
-      />
-      <meta
-        property="og:url"
-        content="https://www.metropoleserv.com.br/sobre"
+      <SEO
+        keywords="sobre metrópole serviços, história empresa, missão visão valores, terceirização Curitiba"
+        title="Sobre a Metrópole Serviços - Nossa História e Valores | Curitiba"
+        description="Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência."
+        canonical="https://www.metropoleserv.com.br/sobre"
+        ogTitle="Conheça a Metrópole Serviços - História e Missão"
+        ogDescription="Saiba mais sobre a Metrópole Serviços, nossa jornada e compromisso com a excelência em terceirização."
+        ogUrl="https://www.metropoleserv.com.br/sobre"
+        ogImage="https://www.metropoleserv.com.br/images/about-pg.jpg"
+        structuredData={aboutStructuredData}
       />
 
       <main className="bg-white">
@@ -40,10 +90,9 @@ export default function About() {
         {/* ===== SEÇÃO 2: NOSSA HISTÓRIA E MISSÃO ===== */}
         <section className="py-20 px-4 max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            {/* Imagem - pode ser do escritório, da equipe, etc. */}
             <div className="order-last md:order-first">
               <img
-                src={aboutImg} // SUBSTITUA PELO CAMINHO DA SUA IMAGEM
+                src={aboutImg}
                 alt="Escritório da Metrópole Serviços em Curitiba"
                 className="rounded-lg shadow-xl w-full h-auto flex-shrink-0 hover:scale-105 transition-transform duration-1000"
               />

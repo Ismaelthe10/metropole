@@ -2,65 +2,145 @@ import { FaShieldAlt, FaBroom, FaTools } from "react-icons/fa";
 import Card from "../../components/Card/Card.jsx";
 
 export default function Home() {
+  const homeStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Metrópole Serviços",
+    alternateName: "Metropole Servicos",
+    description:
+      "Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios.",
+    url: "https://www.metropoleserv.com.br",
+    logo: "https://www.metropoleserv.com.br/images/logo.svg",
+    image: "https://www.metropoleserv.com.br/images/home-og.jpg",
+    telephone: "+5541987937115",
+    email: "metropoleservicos.pr@gmail.com",
+    foundingDate: "2023",
+    numberOfEmployees: "10-50",
+    priceRange: "$$",
+    currenciesAccepted: "BRL",
+    paymentAccepted: "Cash, Credit Card, Bank Transfer, PIX",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "R. Julio Luvisotto, 72 ",
+      addressLocality: "Campina Grande do Sul",
+      addressRegion: "PR",
+      postalCode: "83430-000",
+      addressCountry: "BR",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "-25.3496", // Coordenadas aproximadas de Campina Grande do Sul
+      longitude: "-49.1140",
+    },
+    openingHours: ["Mo-Fr 08:00-18:00"],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "18:00",
+      },
+    ],
+    serviceArea: {
+      "@type": "GeoCircle",
+      geoMidpoint: {
+        "@type": "GeoCoordinates",
+        latitude: "-25.4284",
+        longitude: "-49.2733",
+      },
+      geoRadius: "50000",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Curitiba",
+        containedInPlace: {
+          "@type": "State",
+          name: "Paraná",
+        },
+      },
+      {
+        "@type": "State",
+        name: "Região Metropolitana de Curitiba",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Serviços de Terceirização",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Segurança Patrimonial e Controle de Acesso",
+            description:
+              "Soluções completas em segurança para empresas e condomínios, com projetos estratégicos, protocolos rigorosos e equipe qualificada.",
+            serviceType: "Security Services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Limpeza Profissional e Conservação",
+            description:
+              "Alto padrão em limpeza e conservação com gestão eficaz, produtos de alto desempenho e foco no uso consciente dos recursos.",
+            serviceType: "Cleaning Services",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Manutenção e Reparos Gerais (Facilities)",
+            description:
+              "Gama completa de serviços de manutenção para garantir a funcionalidade e a valorização do seu imóvel com agilidade e qualidade.",
+            serviceType: "Maintenance Services",
+          },
+        },
+      ],
+    },
+    sameAs: [
+      "https://www.instagram.com/metropoleserv",
+      "https://wa.me/5541987937115",
+    ],
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+5541987937115",
+        contactType: "customer service",
+        availableLanguage: "Portuguese",
+        areaServed: "BR",
+      },
+      {
+        "@type": "ContactPoint",
+        email: "metropoleservicos.pr@gmail.com",
+        contactType: "customer service",
+        availableLanguage: "Portuguese",
+      },
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: "25",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
   return (
     <>
-      <title>
-        Metrópole Serviços - Terceirização em Curitiba | Segurança, Limpeza e
-        Facilities
-      </title>
-      <meta
-        name="description"
-        content="Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios."
+      <SEO
+        title="Metrópole Serviços - Terceirização em Curitiba | Segurança, Limpeza e Facilities"
+        description="Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios."
+        keywords="terceirização serviços Curitiba, segurança patrimonial, limpeza predial, portaria 24h, facilities, manutenção predial, Curitiba, Paraná"
+        canonical="https://www.metropoleserv.com.br/"
+        ogTitle="Metrópole Serviços - Terceirização de Serviços em Curitiba"
+        ogDescription="Soluções completas em segurança, limpeza e manutenção para empresas e condomínios em Curitiba e região."
+        ogType="website"
+        ogUrl="https://www.metropoleserv.com.br/"
+        ogImage="https://www.metropoleserv.com.br/images/home-og.jpg"
+        structuredData={homeStructuredData}
       />
-      <meta
-        name="keywords"
-        content="terceirização serviços Curitiba, segurança patrimonial, limpeza predial, portaria 24h, facilities, manutenção predial, Curitiba, Paraná"
-      />
-      <link rel="canonical" href="https://www.metropoleserv.com.br/" />
-      {/* Open Graph Tags */}
-      <meta
-        property="og:title"
-        content="Metrópole Serviços - Terceirização de Serviços em Curitiba"
-      />
-      <meta
-        property="og:description"
-        content="Soluções completas em segurança, limpeza e manutenção para empresas e condomínios em Curitiba e região."
-      />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.metropoleserv.com.br/" />
-
-      {/* Imagem específica para a Home */}
-      <meta property="og:site_name" content="Metrópole Serviços" />
-      <meta property="og:locale" content="pt_BR" />
-      {/* Exemplo de Schema Markup (JSON-LD ) para LocalBusiness */}
-      <script type="application/ld+json">
-        {`
-            {
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Metrópole Serviços",
-              "description": "Empresa especializada em terceirização de serviços em Curitiba e região.",
-              "url": "https://www.metropoleserv.com.br",
-              "telephone": "+5541987937115",
-              "email": "metropoleservicos.pr@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Curitiba",
-                "addressRegion": "PR",
-                "addressCountry": "BR"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "-25.4284",
-                "longitude": "-49.2733"
-              },
-              "openingHours": "Mo-Fr 08:00-18:00",
-              "sameAs": [
-                "https://www.instagram.com/metropoleserv"
-              ]
-            }
-          `}
-      </script>
 
       <main>
         {/* ===== SEÇÃO 1: HERO (APRESENTAÇÃO PRINCIPAL ) ===== */}
