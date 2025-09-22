@@ -16,7 +16,6 @@ export default function Home() {
     telephone: "+5541987937115",
     email: "metropoleservicos.pr@gmail.com",
     foundingDate: "2023",
-    numberOfEmployees: "10-50",
     priceRange: "$$",
     currenciesAccepted: "BRL",
     paymentAccepted: "Cash, Credit Card, Bank Transfer, PIX",
