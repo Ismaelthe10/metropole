@@ -12,7 +12,7 @@ export default function Home() {
       "Empresa especializada em terceirização de serviços em Curitiba e região. Oferecemos soluções completas em segurança patrimonial, limpeza profissional e manutenção predial para empresas e condomínios.",
     url: "https://www.metropoleserv.com.br",
     logo: "https://www.metropoleserv.com.br/images/logo.svg",
-    image: "https://www.metropoleserv.com.br/images/oghome.png",
+    image: "https://www.metropoleserv.com.br/images/home-og.jpg",
     telephone: "+5541987937115",
     email: "metropoleservicos.pr@gmail.com",
     foundingDate: "2023",
@@ -138,7 +138,7 @@ export default function Home() {
         ogDescription="Soluções completas em segurança, limpeza e manutenção para empresas e condomínios em Curitiba e região."
         ogType="website"
         ogUrl="https://www.metropoleserv.com.br/"
-        ogImage="https://www.metropoleserv.com.br/images/oghome.png"
+        ogImage="https://www.metropoleserv.com.br/images/home-og.jpg"
         structuredData={homeStructuredData}
       />
 
