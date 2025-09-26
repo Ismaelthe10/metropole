@@ -73,7 +73,7 @@ export default function About() {
         ogTitle="Conheça a Metrópole Serviços - História e Missão"
         ogDescription="Saiba mais sobre a Metrópole Serviços, nossa jornada e compromisso com a excelência em terceirização."
         ogUrl="https://www.metropoleserv.com.br/sobre"
-        ogImage="https://www.metropoleserv.com.br/images/about-pg.jpg"
+        ogImage="https://www.metropoleserv.com.br/images/oghome.png"
         structuredData={aboutStructuredData}
       />
 
