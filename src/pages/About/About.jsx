@@ -1,5 +1,5 @@
 import { FaRegBuilding, FaRegEye, FaRegHeart } from "react-icons/fa";
-import aboutImg from "../../assets/about.webp";
+import aboutImg from "../../assets/about-image.png";
 import Seo from "../../components/Seo/Seo.jsx";
 
 export default function About() {
@@ -91,7 +91,7 @@ export default function About() {
 
         {/* ===== SEÇÃO 2: NOSSA HISTÓRIA E MISSÃO ===== */}
         <section className="py-20 px-4 max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-140">
             <div className="order-last md:order-first">
               <img
                 src={aboutImg}
