@@ -1,82 +1,9 @@
 import { FaRegBuilding, FaRegEye, FaRegHeart } from "react-icons/fa";
 import aboutImg from "../../assets/about-image.png";
-import Seo from "../../components/Seo/Seo.jsx";
 
 export default function About() {
-  const aboutStructuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      name: "Sobre a Metrópole Serviços",
-      description:
-        "Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência.",
-      url: "https://www.metropoleserv.com.br/sobre",
-      mainEntity: {
-        "@type": "Organization",
-        name: "Metrópole Serviços",
-        description:
-          "Mais do que uma prestadora de serviços, somos seus parceiros em criar ambientes seguros, limpos e eficientes em Curitiba e Região.",
-        foundingDate: "2023",
-        founder: {
-          "@type": "Person",
-          name: "Fábio",
-        },
-        mission:
-          "Garantir a tranquilidade de nossos clientes através de serviços de segurança e facilities executados com máxima eficiência e profissionalismo.",
-        vision:
-          "Ser a empresa de terceirização de serviços mais confiável e recomendada de Curitiba, reconhecida pela nossa excelência e integridade.",
-        values:
-          "Compromisso, Qualidade, Transparência, Segurança e Respeito às Pessoas",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "R. Julio Luvisotto, 72 ",
-          addressLocality: "Campina Grande do Sul",
-          addressRegion: "PR",
-          postalCode: "83430-000",
-          addressCountry: "BR",
-        },
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+5541987937115",
-          email: "metropoleservicos.pr@gmail.com",
-          contactType: "customer service",
-        },
-        sameAs: ["https://www.instagram.com/metropoleserv"],
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.metropoleserv.com.br/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Sobre",
-          item: "https://www.metropoleserv.com.br/sobre",
-        },
-      ],
-    },
-  ];
   return (
     <>
-      <Seo
-        keywords="sobre metrópole serviços, história empresa, missão visão valores, terceirização Curitiba"
-        title="Sobre a Metrópole Serviços - Nossa História e Valores | Curitiba"
-        description="Conheça a história, missão e valores da Metrópole Serviços. Empresa curitibana especializada em terceirização com foco em qualidade e transparência."
-        canonical="https://www.metropoleserv.com.br/sobre"
-        ogTitle="Conheça a Metrópole Serviços - História e Missão"
-        ogDescription="Saiba mais sobre a Metrópole Serviços, nossa jornada e compromisso com a excelência em terceirização."
-        ogUrl="https://www.metropoleserv.com.br/sobre"
-        ogImage="https://www.metropoleserv.com.br/images/home-og.jpg"
-        structuredData={aboutStructuredData}
-      />
-
       <main className="bg-white">
         {/* ===== SEÇÃO 1: TÍTULO E INTRODUÇÃO ===== */}
         <section className="py-20 px-4 text-center bg-gray-50">
