@@ -78,6 +78,16 @@ export default function Footer() {
         <p>
           CNPJ: <span itemProp="taxID">{companyInfo.cnpj}</span>
         </p>
+        <p>
+          <a
+            className="text-gray-500 text-sm"
+            href="https://wa.me/5541995928363"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Desenvolvido por: Ismael Monteiro
+          </a>
+        </p>
       </div>
       {/* Links para Políticas de Privacidade e Termos de Uso */}
       <div className="text-sm mt-8">
