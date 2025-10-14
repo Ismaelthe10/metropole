@@ -18,7 +18,7 @@ export default function About() {
 
         {/* ===== SEÇÃO 2: NOSSA HISTÓRIA E MISSÃO ===== */}
         <section className="py-20 px-4 max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center h-140">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center md:h-140">
             <div className="order-last md:order-first">
               <img
                 src={aboutImg}
