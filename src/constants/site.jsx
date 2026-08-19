@@ -51,5 +51,5 @@ export const companyInfo = {
   cnpj: "49.573.913/0001-96",
   phone: "+5541987937115",
   email: "metropoleservicos.pr@gmail.com",
-  siteUrl: "https://www.seusite.com.br", // Atualize com seu domínio real
+  siteUrl: "https://www.metropoleserv.com.br",
 };
