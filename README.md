@@ -1,5 +1,7 @@
 # Metrópole Serviços
 
+<img src="public/images/ogimage.jpg" alt="Metrópole Serviços" width="420">
+
 
 
 Marketing site for an outsourcing company serving Curitiba and the surrounding metropolitan region of Paraná, Brazil. The business provides property security, professional cleaning, and building maintenance to companies and residential condominiums.
